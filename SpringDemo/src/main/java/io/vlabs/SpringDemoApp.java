@@ -6,12 +6,6 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class SpringDemoApp {
 
 	public static void main(String[] args) {
-//		Triangle triangle = new Triangle();
-//		triangle.draw();
-
-//		BeanFactory factory = new XmlBeanFactory(new FileSystemResource("spring.xml"));
-//		Triangle triangle = (Triangle) factory.getBean("triangle");
-//		triangle.draw();
 
 		ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
 		Triangle triangle = (Triangle) context.getBean("triangle");

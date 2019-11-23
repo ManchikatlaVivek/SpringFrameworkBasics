@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<bean id="triangle" class="io.vlabs.Triangle">
+		<property name="type">
+			<value>Equilateral</value>
+		</property>
+	</bean>
+
+	<bean id="trianglePoints" class="io.vlabs.TrianglePoints">
+		<property name="pointA" ref="point1"/>
+		<property name="pointB" ref="point2"/>
+		<property name="pointC" ref="point3"/>
+	</bean>
+
+	<bean id="point1" class="io.vlabs.Point">
+		<property name="x" value="0" />
+		<property name="y" value="20"/>
+	</bean>
+	
+	<bean id="point2" class="io.vlabs.Point">
+		<property name="x" value="0" />
+		<property name="y" value="0"/>
+	</bean>
+	
+	<bean id="point3" class="io.vlabs.Point">
+		<property name="x" value="20" />
+		<property name="y" value="0"/>
+	</bean>
+
+</beans>
+        

@@ -1,9 +1,16 @@
 package io.vlabs;
 
-public class TrianglePoints {
+import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.BeanNameAware;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
+
+public class TrianglePoints implements ApplicationContextAware, BeanNameAware {
+	
 	private Point pointA;
 	private Point pointB;
 	private Point pointC;
+	private ApplicationContext context;
 	
 	public TrianglePoints() {
 		
@@ -45,4 +52,18 @@ public class TrianglePoints {
 		System.out.println("Points are ("+pointB.getX()+" , "+pointB.getY()+")");
 		System.out.println("Points are ("+pointC.getX()+" , "+pointC.getY()+")");
 	}
+	
+
+	@Override
+	public void setApplicationContext(ApplicationContext context) throws BeansException {
+		// TODO Auto-generated method stub
+		this.context = context;
+	}
+
+	@Override
+	public void setBeanName(String name) {
+		System.out.println("Bean name is: "+name);
+		
+	}
+
 }

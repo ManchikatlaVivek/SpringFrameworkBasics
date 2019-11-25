@@ -5,11 +5,11 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class SpringDemoApp {
 
-	private static ApplicationContext context;
+	
 
 	public static void main(String[] args) {
 
-		context = new ClassPathXmlApplicationContext("spring.xml");
+		ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
 		
 		TrianglePoints trianglePoints = (TrianglePoints)context.getBean("trianglePoints");
 		trianglePoints.draw();

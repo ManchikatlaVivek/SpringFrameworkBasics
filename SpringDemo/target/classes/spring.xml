@@ -7,27 +7,21 @@
 		</property>
 	</bean>
 
-	<bean id="trianglePoints" class="io.vlabs.TrianglePoints">
-		<property name="points">
-			<list>
-			<ref bean="point1"/>
-			<ref bean="point2"/>
-			<ref bean="point3"/>
-			</list>
-		</property>
+	<bean id="trianglePoints" class="io.vlabs.TrianglePoints" autowire="byName">
+		
 	</bean>
 
-	<bean id="point1" class="io.vlabs.Point">
+	<bean id="pointA" class="io.vlabs.Point">
 		<property name="x" value="0" />
 		<property name="y" value="20" />
 	</bean>
 
-	<bean id="point2" class="io.vlabs.Point">
+	<bean id="pointB" class="io.vlabs.Point">
 		<property name="x" value="0" />
 		<property name="y" value="0" />
 	</bean>
 
-	<bean id="point3" class="io.vlabs.Point">
+	<bean id="pointC" class="io.vlabs.Point">
 		<property name="x" value="20" />
 		<property name="y" value="0" />
 	</bean>

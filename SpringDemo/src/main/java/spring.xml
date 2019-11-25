@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
 <beans>
-	<bean id="triangle" class="io.vlabs.Triangle">
-		<property name="type">
-			<value>Equilateral</value>
-		</property>
-	</bean>
-
 	<bean id="trianglePoints" class="io.vlabs.TrianglePoints" autowire="byName">
 		
 	</bean>
@@ -25,6 +19,8 @@
 		<property name="x" value="20" />
 		<property name="y" value="0" />
 	</bean>
+	
+	<bean class="io.vlabs.DisplayNameBeanPostProcessor"></bean>
 
 </beans>
         

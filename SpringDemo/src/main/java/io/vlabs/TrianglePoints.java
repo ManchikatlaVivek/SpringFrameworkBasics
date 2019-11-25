@@ -1,15 +1,12 @@
 package io.vlabs;
 
-import org.springframework.beans.factory.DisposableBean;
-import org.springframework.beans.factory.InitializingBean;
-
-public class TrianglePoints implements InitializingBean, DisposableBean {
+public class TrianglePoints {
 	private Point pointA;
 	private Point pointB;
 	private Point pointC;
-	
+
 	public TrianglePoints() {
-		
+
 	}
 
 	public TrianglePoints(Point pointA, Point pointB, Point pointC) {
@@ -42,22 +39,11 @@ public class TrianglePoints implements InitializingBean, DisposableBean {
 	public void setPointC(Point pointC) {
 		this.pointC = pointC;
 	}
-	
+
 	public void draw() {
-		System.out.println("Point A: ("+pointA.getX()+" , "+pointA.getY()+")");
-		System.out.println("Point B: ("+pointB.getX()+" , "+pointB.getY()+")");
-		System.out.println("Point C: ("+pointC.getX()+" , "+pointC.getY()+")");
+		System.out.println("Point A: (" + pointA.getX() + " , " + pointA.getY() + ")");
+		System.out.println("Point B: (" + pointB.getX() + " , " + pointB.getY() + ")");
+		System.out.println("Point C: (" + pointC.getX() + " , " + pointC.getY() + ")");
 	}
 
-	@Override
-	public void afterPropertiesSet() throws Exception {
-		System.out.println("Init the bean");
-		
-	}
-
-	@Override
-	public void destroy() throws Exception {
-		System.out.println("The Beans are destroyed");
-		
-	}
 }

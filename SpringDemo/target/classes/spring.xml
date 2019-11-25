@@ -20,7 +20,15 @@
 		<property name="y" value="0" />
 	</bean>
 	
-	<bean class="io.vlabs.DisplayNameBeanPostProcessor"></bean>
+	
+	<bean id="centerPoint" class="io.vlabs.Point">
+	<property name="x" value="10"/>
+	<property name="y" value="20"/>
+	</bean>
+	
+	<bean id="cirlce" class="io.vlabs.Circle">
+		<property name="center" ref="centerPoint"/>
+	</bean>
 
 </beans>
         

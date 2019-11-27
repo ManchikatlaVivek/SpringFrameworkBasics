@@ -1,12 +1,16 @@
 package io.vlabs;
 
-public class Circle implements Shape {
+import javax.annotation.Resource;
 
+public class Circle implements Shape {
+	
+	@Resource
 	private Point center;
 
 	public Point getCenter() {
 		return center;
 	}
+	
 
 	public void setCenter(Point center) {
 		this.center = center;
@@ -15,7 +19,7 @@ public class Circle implements Shape {
 	@Override
 	public void draw() {
 		System.out.println("Cirlce is Drawn");
-		System.out.println("Circle Center: ( "+ center.getX()+" , "+center.getY()+" )");
+		System.out.println("Circle Center: ( " + center.getX() + " , " + center.getY() + " )");
 	}
 
 }

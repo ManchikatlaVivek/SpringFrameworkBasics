@@ -1,34 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
-<beans>
-	<bean id="trianglePoints" class="io.vlabs.TrianglePoints" autowire="byName">
-		
-	</bean>
 
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- <bean id="triangle" class="io.vlabs.TrianglePoints">
+		<property name="pointA" ref="pointA" />
+		<property name="pointB" ref="pointB" />
+		<property name="pointC" ref="pointC" />
+	</bean>
 	<bean id="pointA" class="io.vlabs.Point">
 		<property name="x" value="0" />
 		<property name="y" value="20" />
 	</bean>
-
 	<bean id="pointB" class="io.vlabs.Point">
 		<property name="x" value="0" />
 		<property name="y" value="0" />
-	</bean>
-
+	</bean> -->
 	<bean id="pointC" class="io.vlabs.Point">
 		<property name="x" value="20" />
 		<property name="y" value="0" />
 	</bean>
-	
-	
-	<bean id="centerPoint" class="io.vlabs.Point">
-	<property name="x" value="10"/>
-	<property name="y" value="20"/>
+
+
+
+	<bean id="circle" class="io.vlabs.Circle" >
 	</bean>
-	
-	<bean id="cirlce" class="io.vlabs.Circle">
-		<property name="center" ref="centerPoint"/>
-	</bean>
+	<context:annotation-config></context:annotation-config>
 
 </beans>
         
